@@ -1,0 +1,31 @@
+{
+    "product": [
+        {
+            "id": 1,
+            "name": "chaddi",
+            "price": 200,
+            "size": 90,
+            "qty": 1,
+            "baseprice": 200,
+            "img": "https://5.imimg.com/data5/SELLER/Default/2023/7/329905023/DP/CH/AP/137091973/whatsapp-image-2023-07-28-at-23-34-22-500x500.jpeg"
+        },
+        {
+            "id": 2,
+            "name": "banyan",
+            "price": 100,
+            "size": 100,
+            "qty": 1,
+            "baseprice": 100,
+            "img": "https://5.imimg.com/data5/SELLER/Default/2023/7/329905023/DP/CH/AP/137091973/whatsapp-image-2023-07-28-at-23-34-22-500x500.jpeg"
+        },
+        {
+            "id": 3,
+            "name": "dhoti",
+            "price": 10,
+            "size": 80,
+            "qty": 1,
+            "baseprice": 10,
+            "img": "https://5.imimg.com/data5/SELLER/Default/2023/7/329905023/DP/CH/AP/137091973/whatsapp-image-2023-07-28-at-23-34-22-500x500.jpeg"
+        }
+    ]
+}

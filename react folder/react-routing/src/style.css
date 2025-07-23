@@ -1,0 +1,175 @@
+header {
+    /* background-color: cadetblue; */
+    color: black;
+    text-transform: uppercase;
+    /* position: static;
+    z-index: 2; */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    background-color: rgb(129, 198, 210);
+}
+
+img {
+    /* background-color: black; */
+}
+
+.link.jtn {
+    top: 5px;
+    left: 0px;
+    z-index: 5;
+}
+
+.link {
+    transition: 1s;
+}
+
+
+.link li {
+    list-style: none;
+    display: inline-block;
+    /* background-color: black; */
+    /* padding: 20px; */
+}
+
+
+
+.link a {
+    text-decoration: none;
+    color: black;
+}
+
+.change {
+    background-color: blue;
+}
+
+.active{
+    background-color: blueviolet;
+}
+
+#bar {
+    display: none;
+}
+
+#bar:active {
+    /* filter: drop-shadow(1px 1px 5px white); */
+}
+
+/* .change {
+    background-color: blue;
+} */
+
+@media (min-width:360px) {
+    .container {
+        width: 360px;
+        margin: 0 auto;
+    }
+
+    .link {
+        flex-direction: column;
+        width: 100%;
+        display: block;
+        text-align: center;
+        position: absolute;
+        left: 0px;
+        top: -150px;
+        z-index: -1;
+        /* background-color: rgb(22, 168, 144); */
+    }
+
+    .link li {
+        width: 100%;
+        margin: 5px;
+    }
+
+    #bar {
+        display: block;
+    }
+
+    /* .change {
+        background-color: blue;
+    } */
+}
+
+@media (min-width:560px) {
+
+    .container {
+        width: 560px;
+        margin: 0 auto;
+    }
+
+    .link {
+        flex-direction: column;
+        width: 100%;
+        display: block;
+        text-align: center;
+        position: absolute;
+        left: 0px;
+        top: -150px;
+        z-index: -1;
+        /* background-color: blueviolet; */
+    }
+
+    .link li {
+        width: 100%;
+        margin: 5px;
+    }
+
+    #bar {
+        display: block;
+    }
+
+    /* .change {
+        background-color: blue;
+    } */
+}
+
+@media (min-width:720px) {
+    .container {
+        width: 720px;
+        margin: 0 auto;
+    }
+
+    #bar {
+        display: none;
+    }
+
+    .link li {
+        width: auto;
+        margin: 0 0 0 20px;
+    }
+
+    .link {
+        position: static;
+        display: flex;
+        width: auto;
+        /* background-color: cadetblue; */
+        z-index: 1;
+    }
+
+    /* .change {
+        background-color: blue;
+    } */
+}
+
+@media (min-width:920px) {
+    .container {
+        width: 920px;
+        margin: 0 auto;
+    }
+
+}
+
+@media (min-width:1200px) {
+    .container {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+}
