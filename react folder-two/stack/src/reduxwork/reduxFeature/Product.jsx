@@ -10,7 +10,6 @@ export const Allproduct = createAsyncThunk("user", async (user) => {
     if (!data.ok) {
         throw new Error("Data failed to fetch")
     }
-
 })
 
 const ProductSlice = createSlice({
@@ -22,6 +21,7 @@ const ProductSlice = createSlice({
     },
 
     extraReducers: (builder) => {
+
         builder
             .addCase(Allproduct.pending, (state) => {
                 state.loading = true
@@ -36,8 +36,9 @@ const ProductSlice = createSlice({
                 state.error = null
                 state.items.push(action.payload)
             })
+
     }
-    
+
 })
 
 export default ProductSlice.reducer

@@ -28,7 +28,29 @@ const AddproductSlice = createSlice(
             error: null
         },
 
-        reducers: {},
+        reducers: {
+
+            plus: (state, action) => {
+                const item = state.items.find(pro => pro.id === action.payload)
+                if (item) {
+                    item.qty += 1
+                    item.total = item.qty * item.unitprice
+                }
+            },
+
+            minus: (state, action) => {
+                const item = state.items.find(pro => pro.id === action.payload)
+                if (item && item.qty > 1) {
+                    item.qty -= 1
+                    item.total = item.qty * item.unitprice
+                }
+            },
+
+            remove: (state, action) => {
+                state.items = state.items.filter(pro => pro.id !== action.payload)
+            }
+
+        },
 
         extraReducers: (builder) => {
             builder
@@ -40,11 +62,14 @@ const AddproductSlice = createSlice(
                         return;
                     }
                     const finde = state.items.find(product => product.id === pro.id)
-                    if (!finde) {
-                        state.items.push({ ...pro })
+
+                    if (finde) {
+                        finde.qty += 1
+                        finde.total = finde.qty * finde.unitprice
                     } else {
-                        console.log("item not added")
+                        state.items.push({ ...pro, unitprice: pro.price, total: pro.price })
                     }
+
                 })
                 .addCase(cart.rejected, (state, action) => {
                     state.error = action.payload
@@ -53,5 +78,5 @@ const AddproductSlice = createSlice(
     }
 
 )
-
+export const { plus, minus, remove } = AddproductSlice.actions
 export default AddproductSlice.reducer

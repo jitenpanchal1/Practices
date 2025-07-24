@@ -22,11 +22,6 @@ function Addtocart() {
     }, [])
 
     const Addcart = (product) => {
-        const check = cartitem.some((item) => item.id === product.id)
-        if (check) {
-            alert("Item allready added")
-            return;
-        }
         dispatch(cart(product))
     }
 
